@@ -28,3 +28,8 @@ One hot encoding for Variable InternetService, Contract , PaymentMethod, as thes
 We observe we have missing values in columns tenure, MonthlyCharges, TotalCharges. We will impute MonthlyCharges, TotalCharges after train test split, as we will impute it with it's mean value. 
 
 Using Pearson Correlation, I observed that tenure and TotalCharges are highly correlated. Also, observed that TotalCharges is highly correlated with Multiplelines, OnlineSecurity, OnlineBackup, DeviceProtection, StreamingTv, StreamingMovies.
+
+After Splitting the dataset into train and test. Imputed column Tenure,MonthlyCharges with median value, as the distribution of the variable was normal. Imputed column TotalCharges with tenure* monthlycharges, imputing nulls with this calculated field. 
+On hot encoding for variable tenure, after the imputation of tenure with it's median value.
+## Scaling techniques
+Applying MinMaxScalingtechniques produces values of range [0,1]. Our dataset has features with hard boundaries. It does not have outliers.
