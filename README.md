@@ -28,8 +28,11 @@ One hot encoding for Variable InternetService, Contract , PaymentMethod, as thes
 We observe we have missing values in columns tenure, MonthlyCharges, TotalCharges. We will impute MonthlyCharges, TotalCharges after train test split, as we will impute it with it's mean value. 
 
 Using Pearson Correlation, I observed that tenure and TotalCharges are highly correlated. Also, observed that TotalCharges is highly correlated with Multiplelines, OnlineSecurity, OnlineBackup, DeviceProtection, StreamingTv, StreamingMovies.
-
+# Splitting Dataset
 After Splitting the dataset into train and test. Imputed column Tenure,MonthlyCharges with median value, as the distribution of the variable was normal. Imputed column TotalCharges with tenure* monthlycharges, imputing nulls with this calculated field. 
 On hot encoding for variable tenure, after the imputation of tenure with it's median value.
+
+First our model needs to be trained, second our model needs to be tested. Therefore it is best to have two different datasets. As for now we only have one, it is very common to split the data accordingly. X is the data with the independent variables, Y is the data with the dependent variable. The test size variable determines in which ratio the data will be split. It is quite common to do this in an 80 Training / 20 Test ratio.
+
 ## Scaling techniques
-Applying MinMaxScalingtechniques produces values of range [0,1]. Our dataset has features with hard boundaries. It does not have outliers.
+Applying MinMaxScalingtechniques produces values of range [0,1]. Our dataset has features with hard boundaries. It does not have outliers. MinMaxScaler rescales the data set such that all feature values are in the range [0,1]. MinMaxScaler is very sensitive to the presence of outliers.
