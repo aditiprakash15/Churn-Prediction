@@ -36,3 +36,31 @@ First our model needs to be trained, second our model needs to be tested. Theref
 
 ## Scaling techniques
 Applying MinMaxScalingtechniques produces values of range [0,1]. Our dataset has features with hard boundaries. It does not have outliers. MinMaxScaler rescales the data set such that all feature values are in the range [0,1]. MinMaxScaler is very sensitive to the presence of outliers.
+
+# Logistic Regression & Model Testing
+I will start with Logistic Regression which is used for predicting binary outcome, to predict the target variable. I will use scikit-learn (sklearn) for making different models which is an open source library for Python. 
+I make use of Logistic Regression- with grid search & cross validation. I get an accuracy of 80% on test dataset.
+
+The average bagging logistic classifier recall score is 0.49 for train and 0.54 for test. The average accuracy is 0.80 for train and 0.81 for test. Bagging is not helping us improve our logistic classifier by much percentage.
+
+The average Adaboosting logit classifier recall score is 0.52 for train and 0.55 for test. The average accuracy for logit is 0.80 for train and 0.81 for test. The Adaboosting performance is not better than original classifier.
+
+# KNN classification
+I get an accuracy of 79% on test dataset.
+
+# Linear SVM
+I get an improved accuracy of 80.1% on test dataset.
+
+# Decision Tree
+I get an improved accuracy of 79.3% on test dataset.
+
+I tried Bagging Classifier for Decision Tree. The average bagging decision tree classifier is recall score is 0.49 for train and 0.50 for test. The average accuracy is 0.80 for train and 0.805 for test. The bagging performance is better than decision tree classifier.
+
+The average Adaboosting decision tree classifier recall score is 0.50 for train and 0.56 for test. The average accuracy is 0.78 for train and 0.80 for test. The Adaboosting performance is similar to original classifier.
+
+# Kerenilzed Support Vector Machine- RBF
+I get an improved accuracy of 82% on test dataset.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+It can be observed that some variables have a positive relation to our predicted variable and some have a negative relation. Customers with negative values show that they are unlikely to churn while those with positive values shows they are likely to churn. 
